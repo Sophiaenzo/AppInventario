@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    android:background="#13C51A"
+    android:orientation="vertical">
+    
+        <ImageView
+            android:id="@+id/ico_sucesso"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/check_24"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            
+            <TextView
+                android:id="@+id/texto_menssagem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUCESSO"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:textColor="#4CAF50"/>
+
+            <TextView
+                android:id="@+id/texto_sucesso2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menssagem de sucesso"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:textColor="#0E0D0D"/>
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ico_sucesso1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+</LinearLayout>

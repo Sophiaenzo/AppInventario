@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">coleta</string>
+    <string-array name="Spinner_Items"></string-array>
+    <string name="title_activity_form_lanca">FormLanca</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="chaveGeral">chaveUsuario</string>
+    <string name="sem_sinal_de_internet">SEM SINAL DE INTERNET</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_captura_produto">Capturar</string>
+    <string name="title_activity_lista_de_etiquetas">lista_de_etiquetas</string>
+    <string name="title_activity_lista_itens_etiqueta">lista_itens_etiqueta</string>
+</resources>

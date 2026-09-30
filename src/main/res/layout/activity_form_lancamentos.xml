@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+   tools:context=".FormLancamentos">
+
+
+    <ImageView
+        android:id="@+id/bt_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="62dp"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintBottom_toTopOf="@+id/containerComponents"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="208dp"
+        android:layout_height="92dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/ContainerComponents"
+        android:layout_width="362dp"
+        android:layout_height="547dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+
+    <TextView
+        android:id="@+id/text_titulo1"
+        android:layout_width="341dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:text="DEPOSITO"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/containerComponents"
+        />
+    <TextView
+        android:id="@+id/text_titulo2"
+        android:layout_width="341dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:text="Etiqueta"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo1"
+        />
+
+    <EditText
+        android:id="@+id/Edit_etiqueta"
+        style="@style/Edit_Text2"
+        android:inputType="textImeMultiLine"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo2"/>
+
+    <TextView
+        android:id="@+id/text_titulo3"
+        android:layout_width="341dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:text="Codigo"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/Edit_etiqueta"/>
+
+    <EditText
+        android:id="@+id/Edit_codigo"
+        style="@style/Edit_Text1"
+        android:hint="Codigo"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo3"/>
+
+    <TextView
+        android:id="@+id/text_titulo4"
+        android:layout_width="341dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:text="Lote"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/Edit_codigo"/>
+
+    <EditText
+        android:id="@+id/Edit_lote"
+        style="@style/Edit_Text1"
+        android:hint="Lote"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo4"/>
+
+    <TextView
+        android:id="@+id/text_titulo5"
+        android:layout_width="341dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:text="Qtdade"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/Edit_lote"/>
+
+    <EditText
+        android:id="@+id/Edit_qtdad"
+        style="@style/Edit_Text1"
+        android:hint="Qtdade"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo5"/>
+
+
+    <EditText
+        android:id="@+id/Edit_mensagem"
+        style="@style/Edit_Text3"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/Edit_qtdad"/>
+    <EditText
+        android:id="@+id/Edit_status"
+        style="@style/Edit_Text1"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/Edit_mensagem"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

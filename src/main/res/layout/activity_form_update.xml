@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".FormUpdate">
+
+        <View
+            android:id="@+id/containertop"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/background_view_top"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo"
+            app:layout_constraintTop_toTopOf="@+id/containertop"
+            app:layout_constraintStart_toStartOf="@+id/containertop"
+            app:layout_constraintEnd_toEndOf="@+id/containertop"
+            app:layout_constraintBottom_toBottomOf="@+id/containertop"/>
+
+        <ImageView
+            android:id="@+id/bt_exit_black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_exit_black"
+            app:layout_constraintRight_toRightOf="@+id/containertop"
+            android:layout_marginRight="18dp"
+            tools:layout_editor_absoluteY="15dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/download"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/download"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containertop"/>
+
+        <TextView
+            android:id="@+id/text_titulo2"
+            style="@style/TextViewWhite"
+            android:text="Nova versão disponivel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/download"/>
+
+        <TextView
+            android:id="@+id/text_titulo3"
+            style="@style/TextViewWhite1"
+            android:text="Clique no botao abaixo para receber a nova atualizacao para o seu aplicativo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_titulo2"/>
+
+        <TextView
+            android:id="@+id/text_titulo4"
+            style="@style/TextViewWhite"
+            android:text="INVENTARIO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_titulo3"/>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="378dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_titulo4" />
+
+        <View
+            android:id="@+id/containerbottom"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/background_view_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_confirmar"
+            style="@style/button"
+            android:onClick="button_confirmarOnClick"
+            android:text="ATUALIZAR AGORA"
+            app:layout_constraintTop_toTopOf="@+id/containerbottom"
+            app:layout_constraintStart_toStartOf="@+id/containerbottom"
+            app:layout_constraintEnd_toEndOf="@+id/containerbottom"
+            app:layout_constraintBottom_toBottomOf="@+id/containerbottom"
+            android:layout_marginBottom="20dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

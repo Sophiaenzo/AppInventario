@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+
+    namespace 'br.example.app'
+
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties();
+
+        versionProps.load(new FileInputStream(versionPropsFile))
+        def mMajor = Integer.parseInt(versionProps['MAJOR']).intValue()
+        def mMinor = Integer.parseInt(versionProps['MINOR']).intValue()
+        def codigo = Integer.parseInt(versionProps['VERSION_CODE']).intValue()
+        def nome = versionProps['VERSION_NAME']
+
+        if (mMajor >= 10) {
+            mMajor = 0
+        }
+        if (mMinor >= 10) {
+            mMajor = mMajor + 1
+            mMinor = 0
+        }
+        if (codigo >= 10) {
+            mMinor = mMinor + 1
+            codigo = 0
+        }
+
+        codigo = codigo + 0
+        nome = "${mMajor}.${mMinor}.${codigo}"
+
+        versionProps['MAJOR'] = mMajor.toString()
+        versionProps['MINOR'] = mMinor.toString()
+        versionProps['VERSION_NAME'] = nome.toString()
+        versionProps['VERSION_CODE'] = codigo.toString()
+        versionProps.store(versionPropsFile.newWriter(), null)
+
+
+        defaultConfig {
+            applicationId "br.example.app"
+            minSdk 28
+            targetSdk 33
+            versionCode codigo
+            versionName nome
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    compileSdk 34
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation files('src/main/java/libs/ksoap2-android-assembly-3.1.1-jar-with-dependencies.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.work:work-runtime:2.8.1'
+    implementation 'androidx.navigation:navigation-fragment:2.7.4'
+    implementation 'androidx.navigation:navigation-ui:2.7.4'
+    implementation 'io.github.vicmikhailau:MaskedEditText:4.0.7'
+    testImplementation 'org.json:json:20231013'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.13.0'
+}

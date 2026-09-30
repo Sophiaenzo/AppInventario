@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen4">
+
+    <Button
+        android:id="@+id/buttonOculto"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonInventario"
+        android:layout_width="240dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_layout_custom"
+        android:drawableBottom="@drawable/inventario"
+        android:onClick="BotaoInventario"
+        android:text="Inventário"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.353" />
+
+    <Button
+        android:id="@+id/buttonEstoque"
+        android:layout_width="240dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_layout_custom"
+        android:drawableBottom="@drawable/estoqueproduto"
+        android:onClick="BotaoEstoque"
+        android:text="Estoque do Produto"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_layout_custom"
+        android:drawableRight="@drawable/app_exit"
+        android:onClick="BotaoSair"
+        android:text="Sair"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.730" />
+
+    <ImageView
+        android:id="@+id/imageViewLogoTramar"
+        android:layout_width="254dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_anchor="@+id/buttonOculto"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.986"
+        app:srcCompat="@drawable/logo_tramar_2019" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

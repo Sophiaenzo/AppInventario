@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnVoltarInicio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen4">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="158dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Produto"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="158dp"
+        android:layout_marginEnd="8dp"
+        android:text="Qtd. Capturada"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="246dp"
+        android:layout_marginTop="158dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Qtd. Sistema"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <EditText
+        android:id="@+id/editTextCaptEtiqueta"
+        android:layout_width="375dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="605dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Etiqueta"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_anchor="@+id/editTextCaptEtiqueta"
+        app:layout_anchorGravity="top|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
+
+
+    <EditText
+        android:id="@+id/txtPegaProduto"
+        android:layout_width="186dp"
+        android:layout_height="59dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:hint="Produto"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_anchorGravity="top|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
+
+    <Button
+        android:id="@+id/btnCapturarEtiqueta"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="670dp"
+        android:background="@drawable/button_layout_custom"
+        android:onClick="botaoCapturarEtiqueta"
+        android:text="@string/title_activity_captura_produto"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/btnCapturarEtiqueta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toEndOf="@+id/editTextCaptEtiqueta"
+        app:layout_constraintVertical_bias="0.508" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="376dp"
+        android:layout_height="385dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="200dp" />
+
+    <Button
+        android:id="@+id/btnInicio"
+        android:layout_width="43dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="347dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_layout_custom"
+        android:drawableRight="@drawable/back_icon_icons_com_71028__1_"
+        android:textColor="@android:color/background_light" />
+
+    <Spinner
+        android:id="@+id/spinner_deposito2"
+        android:layout_width="191dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/button_layout_custom"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="158dp"
+        android:text="Ação"
+        android:textColor="@color/white" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

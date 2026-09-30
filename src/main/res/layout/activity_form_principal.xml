@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormPrincipal">
+    <ImageView
+        android:id="@+id/bt_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />	  
+
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/ContainerComponents"
+        android:layout_width="358dp"
+        android:layout_height="388dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+ <TextView
+            android:id="@+id/text_titulo1"
+            style="@style/TextViewWhite"
+            android:text="Data Inventario"
+            app:layout_constraintStart_toStartOf="@id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@id/containerComponents"
+            app:layout_constraintTop_toTopOf="@id/containerComponents"/>
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/edit_data"
+        style="@style/Edit_Text"
+        android:inputType="date"
+        android:textSize="34sp"
+        android:textStyle="bold"
+		app:mask="##/##/####" 
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+		app:layout_constraintTop_toBottomOf="@+id/text_titulo1" />
+
+     <TextView
+            android:id="@+id/text_titulo2"
+            style="@style/TextViewWhite"
+            android:text="Depositos"
+            app:layout_constraintStart_toStartOf="@id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/edit_data"/>
+ 
+    <Spinner
+        android:background="@drawable/style_spinner_deposito"
+        android:id="@+id/spinner_deposito"
+        android:layout_width="match_parent"											 
+        android:layout_height="65dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:entries="@array/Spinner_Items"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_confirmar"
+        style="@style/button"
+        android:onClick="button_confirmarOnClick"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_deposito" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
